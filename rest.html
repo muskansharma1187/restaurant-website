@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>FOOD PARADISE RESTAURANT</title>
+<style>
+body {
+background-color: wheat;
+ }
+h1 {
+color: darkred;
+text-align: center;
+}
+h2 {
+ color: brown;
+ }
+table {
+ border-collapse: collapse;
+}
+th {
+background-color: orange;
+}
+th, td {
+padding: 8px;
+}
+ img {
+border: 1px solid brown;
+}
+img:hover {
+border: 4px solid red;
+}
+hr {
+border: 1px solid brown;
+}
+button {
+background-color: brown;
+color: white;
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: pink;
+color: white;
+}
+.menu {
+display: flex;
+justify-content: space-around;
+}
+.item {
+border: 2px solid brown;
+width: 100px;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+.item:hover{
+background-color: lightyellow;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>FOOD PARADISE RESTAURANT</h1>
+ <p><b>Welcome to our restaurant</b></p>
+<hr width="60%">
+</center>
+<h2>About Us</h2>
+<p>
+ Food Paradise Restaurant serves delicious Indian, Chinese and fast food.
+We provide fresh food with excellent quality and service.
+</p>
+<h2 id="menu">Our Menu</h2>
+<table border="3">
+<tr>
+<th>Dish</th>
+<th>Price</th>
+ </tr>
+
+        <tr>
+            <td>Paneer Butter Masala</td>
+            <td>$220</td>
+        </tr>
+
+        <tr>
+            <td>Veg Biryani</td>
+            <td>$180</td>
+        </tr>
+
+        <tr>
+            <td>Pizza</td>
+            <td>$250</td>
+        </tr>
+
+        <tr>
+            <td>Burger</td>
+            <td>$99</td>
+        </tr>
+
+        <tr>
+            <td>Cold Coffee</td>
+            <td>$89</td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <button onclick="orderFood()">Order Now</button>
+
+
+    <h2>Today's Special Items</h2>
+
+    <div class="menu">
+
+        <div class="item" onclick="showItem('Biryani', 270)">
+            <h3>Biryani</h3>
+            <p>$270</p>
+        </div>
+
+        <div class="item" onclick="showItem('Mojito', 299)">
+            <h3>Mojito</h3>
+            <p>$299</p>
+        </div>
+
+        <div class="item" onclick="showItem('Veg Momo', 199)">
+            <h3>Veg Momo</h3>
+            <p>$199</p>
+        </div>
+
+    </div>
+
+
+    <h2>Special Features</h2>
+
+    <ul>
+        <li>Fresh Food</li>
+        <li>Home Delivery</li>
+        <li>Family Dining</li>
+        <li>Online Booking</li>
+    </ul>
+
+
+    <h2>Restaurant Image</h2>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShTQOdp-cHYEMsFUiGm1pP3D0y5LHOycp9lbsEXDJzlrMK0eRf64dYUX4&s=10"
+        alt="Restaurant"
+        width="600"
+        height="350">
+
+    <br><br>
+
+    <button onclick="contactUs()">Contact Us</button>
+
+
+    <p id="contact">
+        <b>Address:</b> Model Town, Karnal<br>
+        <b>Phone:</b> 9897746533<br>
+        <b>Email:</b> foodparadise@gmail.com
+    </p>
+
+
+    <hr>
+
+    <center>
+        <h2>All rights reserved Pvt Ltd.</h2>
+    </center>
+<script>
+ function orderFood() {
+document.getElementById("menu").scrollIntoView();
+}
+function contactUs() {
+document.getElementById("contact").scrollIntoView();
+ }
+function showItem(name, price) {
+       alert(name + " - $" + price);
+}
+</script>
+</body>
+</html>
